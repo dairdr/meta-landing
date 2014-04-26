@@ -39,23 +39,25 @@
 		width: 1000px;
 		margin:  0 auto;
 		text-align: center;
-		background: url('../images/woman-thinking.jpg') no-repeat;
-		min-height: 600px;
+		max-height: 600px;
+		overflow: hidden;
+		padding-top: 2em;
 
 		h1 {
 			font-size: 2.8em;
 			text-transform: uppercase;
-			margin: 0.7em 0 0.2em;
+			margin: 0;
+			font-weight: normal;
 
 			span {
 				color: red;
 			}
 		}
 
-		h2 {
-			margin: 0;
-			font-size: 1.5em;
-			text-transform: uppercase;
+		div.promo-pic {
+			img {
+				display: block;
+			}
 		}
 	}
 }
@@ -96,7 +98,7 @@
 
 			div.member {
 				width: 200px;
-				margin-right: 2em;
+				margin-right: 3em;
 				@include display-inline(top);
 
 				.pic {
@@ -124,7 +126,35 @@
 }
 
 #app {
-	background-color: #E74C3C;
+	background-color: #fff;
+
+	div.content {
+		width: 1000px;
+		margin:  0 auto;
+		padding: 2.5em 0;
+		text-align: center;
+
+		> div.header {
+			text-transform: uppercase;
+			padding: 1em 0;
+
+			h2 {
+				margin: 0;
+				color: inherit;
+				font-size: 2em;
+				font-weight: normal;
+			}
+		}
+
+		a {
+			color: #fff;
+			@include display-inline(top);
+			text-transform: uppercase;
+			font-size: 1.5em;
+			padding: 0.5em 1em;
+			background: #E74C3C;
+		}
+	}
 }
 
 #footer {
