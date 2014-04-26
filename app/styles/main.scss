@@ -39,7 +39,7 @@
 		width: 1000px;
 		margin:  0 auto;
 		text-align: center;
-		max-height: 600px;
+		max-height: 700px;
 		overflow: hidden;
 		padding-top: 2em;
 
@@ -55,6 +55,9 @@
 		}
 
 		div.promo-pic {
+			width: 80%;
+			margin: 0 auto;
+
 			img {
 				display: block;
 			}
