@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+/* FONT */
+$font-name-main: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-name-second: 'Poiret One';
+$font-name-bold: 'FuturaBT-Bold';
+$font-name-light: 'SerifaBT-Light';
+$font-size: 100%;
+$font-color: #333;
+/* END FONT */
+
+/* COLORS */
+$blue: #176991;
+$light-gray: #E4E4E4;
+$gray: #D6D6D6;
+$dark-blue: #0E4D6E;
+$fancy-blue: #00D9DA;
+$darker-blue: #072839;
+$white: #fff;
+/* END COLORS */
+
+/* MIXIN */
+@mixin font-smooth(){
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+@mixin display-inline($v-align){
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: $v-align;
+	*display: inline;
+	zoom: 1;
+}
+@mixin border-radius($r){
+	border-radius: $r;
+	-webkit-border-radius: $r;
+	-moz-border-radius: $r;
+	-o-border-radius: $r;
+	-ms-border-radius: $r;
+}
+@mixin box-sizing(){
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+@mixin background-size($value){
+	-webkit-background-size: $value;
+	-moz-background-size: $value;
+	-o-background-size: $value;
+	background-size: $value;
+}
+@mixin text-shadow($x, $y, $distance, $color){
+	-webkit-text-shadow:$x $y $distance $color;
+	-moz-text-shadow:$x $y $distance $color;
+	-o-text-shadow:$x $y $distance $color;
+	-ms-text-shadow:$x $y $distance $color;
+	text-shadow:$x $y $distance $color;
+	filter: dropshadow(color=$color, offx=$x, offy=$y);
+}
+@mixin breakpoint($type) {
+	@if $type == retina {
+		@media 
+		only screen and (-webkit-min-device-pixel-ratio: 1.25),
+		only screen and ( min--moz-device-pixel-ratio: 1.25),
+		only screen and ( -o-min-device-pixel-ratio: 1.25/1),
+		only screen and ( min-device-pixel-ratio: 1.25),
+		only screen and ( min-resolution: 200dpi),
+		only screen and ( min-resolution: 1.25dppx) { @content; }
+	}
+}
+/* END MIXIN */
+
+@font-face{
+	font-family: $font-name-light;
+	src: url("../styles/fonts/SerifaBT-Light.eot");
+	src: url("../styles/fonts/SerifaBT-Light.eot?#iefix") format("embedded-opentype"),
+		url("../styles/fonts/SerifaBT-Light.woff") format("woff"),
+		url("../styles/fonts/SerifaBT-Light.ttf") format("truetype")
+}
+
+@font-face{
+	font-family: $font-name-bold;
+	src: url("../styles/fonts/FuturaBT-Bold.eot");
+	src: url("../styles/fonts/FuturaBT-Bold.eot?#iefix") format("embedded-opentype"),
+		url("../styles/fonts/FuturaBT-Bold.woff") format("woff"),
+		url("../styles/fonts/FuturaBT-Bold.ttf") format("truetype")
+}
+
+body {
+	background: #fff;
+	font-family: $font-name-light;
+	font-size: $font-size;
+	color: $font-color;
+	padding: 0;
+	margin: 0;
+	@include font-smooth();
+}
+
+ul, ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}

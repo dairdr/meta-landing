@@ -1,0 +1,107 @@
+// bower:scss
+// endbower
+
+@import 'global';
+
+/* home */
+#nav {
+	background-color: #252525;
+
+	div.content {
+		width: 1000px;
+		margin:  0 auto;
+		color: #fff;
+
+		ul {
+			text-align: center;
+
+			li {
+				@include display-inline(top);
+
+				a {
+					display: block;
+					padding: 1.5em;
+					color: #ccc;
+					font-family: $font-name-bold;
+					text-transform: uppercase;
+
+					&:hover {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+
+#header {
+	div.content {
+		width: 1000px;
+		margin:  0 auto;
+		text-align: center;
+		background: url('../images/woman-thinking.jpg') no-repeat;
+		min-height: 600px;
+
+		h1 {
+			font-size: 2.8em;
+			text-transform: uppercase;
+			margin: 0.7em 0 0.2em;
+
+			span {
+				color: red;
+			}
+		}
+
+		h2 {
+			margin: 0;
+			font-size: 1.5em;
+			text-transform: uppercase;
+		}
+	}
+}
+
+#team {
+	background-color: #E74C3C;
+
+	div.content {
+		width: 1000px;
+		margin:  0 auto;
+		padding-bottom: 2em;
+
+		div.header {
+			text-align: center;
+			text-transform: uppercase;
+			padding: 1em 0;
+
+			h2 {
+				margin: 0;
+				color: #fff;
+				font-size: 2em;
+			}
+		}
+
+		div.team-pics {
+			text-align: center;
+
+			div.pic {
+				width: 180px;
+				@include border-radius(50%);
+				overflow: hidden;
+				margin: 1em;
+				@include display-inline(top);
+
+				img {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+#footer {
+	div.content {
+		width: 1000px;
+		margin:  0 auto;
+	}
+}
+/* end home */
