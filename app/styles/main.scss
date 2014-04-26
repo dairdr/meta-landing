@@ -60,15 +60,15 @@
 	}
 }
 
-#team {
+#crew {
 	background-color: #E74C3C;
 
 	div.content {
 		width: 1000px;
 		margin:  0 auto;
-		padding-bottom: 2em;
+		padding: 2.5em 0;
 
-		div.header {
+		> div.header {
 			text-align: center;
 			text-transform: uppercase;
 			padding: 1em 0;
@@ -77,31 +77,87 @@
 				margin: 0;
 				color: #fff;
 				font-size: 2em;
+				font-weight: normal;
 			}
 		}
 
-		div.team-pics {
+		> div.members {
 			text-align: center;
 
-			div.pic {
-				width: 180px;
-				@include border-radius(50%);
-				overflow: hidden;
-				margin: 1em;
+			div.header {
+				h3 {
+					margin: 0.5em 0;
+					color: #fff;
+					text-transform: capitalize;
+					font-family: $font-name-bold;
+					font-weight: normal;
+				}
+			}
+
+			div.member {
+				width: 200px;
+				margin-right: 2em;
 				@include display-inline(top);
 
-				img {
-					display: block;
+				.pic {
+					overflow: hidden;
+					@include border-radius(50%);
+
+					img {
+						display: block;
+					}
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			div.info {
+				p {
+					color: #fff;
+					margin: 0;
 				}
 			}
 		}
 	}
 }
 
+#app {
+	background-color: #E74C3C;
+}
+
 #footer {
+	background: #eee;
+	padding: 2em 0;
+
 	div.content {
 		width: 1000px;
 		margin:  0 auto;
+		text-align: center;
+
+		nav {
+			margin-bottom: 2em;
+
+			ul {
+				li {
+					@include display-inline(top);
+
+					a {
+						display: block;
+						padding: 1em 0.8em;
+						color: inherit;
+						font-size: 0.8em;
+						font-family: $font-name-bold;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+
+		small {
+			text-transform: capitalize;
+		}
 	}
 }
 /* end home */
