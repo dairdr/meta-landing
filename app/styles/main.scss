@@ -55,11 +55,9 @@
 		}
 
 		div.promo-pic {
-			width: 80%;
-			margin: 0 auto;
-
 			img {
 				display: block;
+				margin: 0 auto;
 			}
 		}
 	}
@@ -168,6 +166,24 @@
 		width: 1000px;
 		margin:  0 auto;
 		text-align: center;
+
+		.sponsors {
+			text-align: center;
+
+			.shield {
+				@include display-inline(middle);
+				width: 20%;
+				margin-right: 2em;
+
+				a {
+					display: block;
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
 
 		nav {
 			margin-bottom: 2em;
